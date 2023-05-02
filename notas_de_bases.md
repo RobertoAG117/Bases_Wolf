@@ -23,3 +23,8 @@ para cuestiones practicas vamos a colorear con una bolita negra las llaves prima
 ### bases día 02/05
 link de la base del día 02
 https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/4#&togetherjs=ijVial699E
+pagina para generar datos
+https://mockaroo.com/
+pagina con el back up de la base
+https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/4
+
