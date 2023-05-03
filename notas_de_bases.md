@@ -59,6 +59,7 @@ INSERT INTO (nombre, folio, num)
 
 la sintaxis será muy parecida a phyton y es ingles completamente 
 
+se debe normalizar una base para dejarla al 100%, sin datos sucios, nulos, vacios, o algún otro problema
 
 
 
