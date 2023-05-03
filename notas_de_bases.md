@@ -65,13 +65,43 @@ se debe normalizar una base para dejarla al 100%, sin datos sucios, nulos, vacio
 LAS CONSULTAS USAREMOS:                 COMANDOS:
 * Qué                                   SELECT
 * Dónde                                 FROM
-* Filtro o caracteristica especial      
+* Filtro o caracteristica especial      LIMIT 10
 
 Ejemplo de uso
 USE pilares;
 SELECT * FROM usuarios;
 
 ![image](https://user-images.githubusercontent.com/125500565/236010744-1ace09b8-5e81-433c-992b-59336cc0824e.png)
+
+USE pilares;
+SELECT * FROM usuarios limit 10;
+#mostramos toda la tabla
+(muestra solo 10 columnas con un filtro)
+
+
+podemos usar un filtro para buscar por edad:
+USE pilares;
+#LIMIT permite meter un filtro de cuantas consultas queremos realizar
+#SELECT * FROM usuarios;
+#mostramos toda la tabla
+SELECT * FROM usuarios WHERE edad_usuario=45;
+![image](https://user-images.githubusercontent.com/125500565/236013090-863e62f0-a228-4f56-8944-ba64256fb416.png)
+
+para poner mayor o igual que 45 años es:
+USE pilares;
+#LIMIT permite meter un filtro de cuantas consultas queremos realizar
+#SELECT * FROM usuarios;
+#mostramos toda la tabla
+SELECT * FROM usuarios WHERE edad_usuario>=45;
+![image](https://user-images.githubusercontent.com/125500565/236013303-a5f94f6d-4b13-4e98-bbe3-f9a4ad47b684.png)
+
+operador relacionales 
+<
+>
+<=
+>=
+=
+
 
 
 
