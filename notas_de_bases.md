@@ -113,6 +113,39 @@ SELECT folio_usuario FROM usuarios WHERE nombre_usuario='Quinn';
 ![image](https://user-images.githubusercontent.com/125500565/236014378-008aa7ad-5e37-4f33-bef8-9b781fac4694.png)
 
 
+en esta captura permite renombrar la columna con x nombre
+USE pilares;
+#LIMIT permite meter un filtro de cuantas consultas queremos realizar
+#SELECT * FROM usuarios;
+#mostramos toda la tabla
+#SELECT * FROM usuarios WHERE edad_usuario>=45;
+SELECT nombre_usuario FROM usuarios;
+SELECT folio_usuario as 'folio de Quinn' FROM usuarios WHERE nombre_usuario='Quinn';
+
+![image](https://user-images.githubusercontent.com/125500565/236014934-2ae6b17a-2e43-47aa-8013-3140f7494f07.png)
+
+
+hacemos un filtro para hacer una consulta solo del folio, nombre, correo y telefono
+USE pilares;
+#LIMIT permite meter un filtro de cuantas consultas queremos realizar
+#SELECT * FROM usuarios;
+#mostramos toda la tabla
+#SELECT * FROM usuarios WHERE edad_usuario>=45;
+#SELECT nombre_usuario FROM usuarios;
+#SELECT folio_usuario as 'folio de Quinn' FROM usuarios WHERE nombre_usuario='Quinn';
+
+SELECT folio_usuario, nombre_usuario, telefono_usuario, correo_usuario FROM usuarios LIMIT 10;
+
+![image](https://user-images.githubusercontent.com/125500565/236016039-19f99101-2afa-48b8-8243-e3712ea3d7e1.png)
+
+link de las consultas que se realizaron el día 03
+https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/7
+
+
+
+
+
+
 
 
 
