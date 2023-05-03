@@ -95,12 +95,24 @@ USE pilares;
 SELECT * FROM usuarios WHERE edad_usuario>=45;
 ![image](https://user-images.githubusercontent.com/125500565/236013303-a5f94f6d-4b13-4e98-bbe3-f9a4ad47b684.png)
 
-operador relacionales 
+operador relacionales para busquedas
 <
 >
 <=
 >=
 =
+ 
+Permite buscar por nombre y los nombres de los usuarios
+USE pilares;
+#LIMIT permite meter un filtro de cuantas consultas queremos realizar
+#SELECT * FROM usuarios;
+#mostramos toda la tabla
+#SELECT * FROM usuarios WHERE edad_usuario>=45;
+SELECT nombre_usuario FROM usuarios;
+SELECT folio_usuario FROM usuarios WHERE nombre_usuario='Quinn';
+![image](https://user-images.githubusercontent.com/125500565/236014378-008aa7ad-5e37-4f33-bef8-9b781fac4694.png)
+
+
 
 
 
