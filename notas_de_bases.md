@@ -28,3 +28,13 @@ https://mockaroo.com/
 pagina con el back up de la base
 https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/4
 
+### día 03/05/2023
+bases realacionales
+líneas de comandos de sql
+el primer comando es el dll para la creación (CREATE DATA BASE) dónde se crea el espacio de la base
+para borrar toda la base es con (DROP DATA BASE)
+para crea tablas es con (CREATE TABLE "junto con el nombre") CREATE TABLE (NOMBRE VARCHAR(10), APELLIDO VARCHAR (10));
+ES  importante visualizar la base como un excel para llevar un orden en esta
+cada ; se va a ejecutar algo así que es importante dónde se pone el  ; por que solo corre hasta dónde se pone este 
+dependiendo de la versión de sql se tienen diferentes comando o sintaxis 
+
