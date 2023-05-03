@@ -62,12 +62,16 @@ la sintaxis será muy parecida a phyton y es ingles completamente
 se debe normalizar una base para dejarla al 100%, sin datos sucios, nulos, vacios, o algún otro problema
 
 
+LAS CONSULTAS USAREMOS:                 COMANDOS:
+* Qué                                   SELECT
+* Dónde                                 FROM
+* Filtro o caracteristica especial      
 
+Ejemplo de uso
+USE pilares;
+SELECT * FROM usuarios;
 
-
-
-
-
+![image](https://user-images.githubusercontent.com/125500565/236010744-1ace09b8-5e81-433c-992b-59336cc0824e.png)
 
 
 
