@@ -38,3 +38,42 @@ ES  importante visualizar la base como un excel para llevar un orden en esta
 cada ; se va a ejecutar algo así que es importante dónde se pone el  ; por que solo corre hasta dónde se pone este 
 dependiendo de la versión de sql se tienen diferentes comando o sintaxis 
 
+con el mismo comando de CREATE TABLE  se crean todas las tablas pero debe seguir la misma sintaxis solo el último va solo
+una vez creadas las tablas usamos drop para borrar contenido o las mismas tablas
+si escribimos alter usuarios entramos a la tabla usuaios y modificamos algo, con add agregamos atributos
+con change cambiamos nombres o logitud de datos (para cambiar el tipo de dato se debe renombrar el dato)
+los importantes son 
+ALTER  (TIPO DE TABLA O TABLA QUE QUEREMOS MODIFICAR O ELIMINAR)
+CREATE
+CHANGE/DROP
+
+COMANDOS DML
+BASICAMENTE DEBEMOS DE CAMBIAR TODO CON COMANDOS
+EJEMPLO 
+INSERT INTO (INSERTAR EN ... QUE TABLA)
+INSERT INTO usuarios (...)
+
+podemos usarlo tambien como 
+INSERT INTO (nombre, folio, num)
+/se puede cambiar como gustes siempre y cuando se le indique que se cambia el orden de los datos/
+
+la sintaxis será muy parecida a phyton y es ingles completamente 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
