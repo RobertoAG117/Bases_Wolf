@@ -144,7 +144,14 @@ https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/7
 
 
 
+ACTIVIDAD 6 LINK DE RESPALDO
+https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/7
 
+
+
+CONSULTAS DEL DIA 09/05/2023 
+DE LA BASE DE PILARES Y SUS RESPECTIVAS CONSULTAS
+https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/10
 
 
 
