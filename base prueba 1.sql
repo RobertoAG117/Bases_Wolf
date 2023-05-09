@@ -82,15 +82,10 @@ CREATE TABLE tallpil(
     100);
   
   
-  INSERT INTO usuarios VALUES ("10001", "JUAN", "GONZALES", "PEREZ", "5534778596", "pedroperez@gmail.com", "Av de los maestros alcaldia miguel hidalgo", 45);
-  
-  
-  
-  INSERT INTO usuarios VALUES ('1111', 'Madelon', 'Jonin', 'Siddle', '2525559197', 'msiddle0@ebay.com', '29777 Miller Trail', 52);
-  
+INSERT INTO usuarios VALUES ("10001", "JUAN", "GONZALES", "PEREZ", "5534778596", "pedroperez@gmail.com", "Av de los maestros alcaldia miguel hidalgo", 45); 
+INSERT INTO usuarios VALUES ('1111', 'Madelon', 'Jonin', 'Siddle', '2525559197', 'msiddle0@ebay.com', '29777 Miller Trail', 52);
 INSERT INTO usuarios (folio_usuario, nombre_usuario, apellido_paterno_usuario, apellido_materno_usuario, edad_usuario, correo_usuario, telefono_usuario, direccion_usuario) VALUES ('1002', 'Gan', 'Giacomoni', 'Gowen', 45, 'ggowen1@ask.com', '2939724291', '464 Lunder Plaza');
-  
-  INSERT INTO usuarios (folio_usuario, nombre_usuario, apellido_paterno_usuario, apellido_materno_usuario, edad_usuario, correo_usuario, telefono_usuario, direccion_usuario) VALUES ('1003', 'Gaile', 'Batrim', 'Jacques', 40, 'gjacques2@amazon.co.jp', '2477195452', '462 East Alley');
+INSERT INTO usuarios (folio_usuario, nombre_usuario, apellido_paterno_usuario, apellido_materno_usuario, edad_usuario, correo_usuario, telefono_usuario, direccion_usuario) VALUES ('1003', 'Gaile', 'Batrim', 'Jacques', 40, 'gjacques2@amazon.co.jp', '2477195452', '462 East Alley');
 INSERT INTO usuarios (folio_usuario, nombre_usuario, apellido_paterno_usuario, apellido_materno_usuario, edad_usuario, correo_usuario, telefono_usuario, direccion_usuario) VALUES ('1004', 'Marcelle', 'Wortman', 'Cackett', 31, 'mcackett3@aol.com', '9138081087', '31 Eagan Trail');
 INSERT INTO usuarios (folio_usuario, nombre_usuario, apellido_paterno_usuario, apellido_materno_usuario, edad_usuario, correo_usuario, telefono_usuario, direccion_usuario) VALUES ('1005', 'Izaak', 'Heddy', 'Higgoe', 58, 'ihiggoe4@uol.com.br', '8747274362', '45 Pearson Alley');
 INSERT INTO usuarios (folio_usuario, nombre_usuario, apellido_paterno_usuario, apellido_materno_usuario, edad_usuario, correo_usuario, telefono_usuario, direccion_usuario) VALUES ('1006', 'Kerwinn', 'Zoppie', 'Restill', 43, 'krestill5@comsenz.com', '1132145749', '32 Rieder Pass');
