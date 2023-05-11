@@ -253,8 +253,8 @@ GROUP BY nombre_pilares
 ORDER BY COUNT(folio_usuario) ASC;
 ![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/f15c8e5e-4118-4cfd-b065-b7ffd8cd919c)
 
-
-
+Actualizado al día 11/05/23 la base con sus respectivas consultas
+https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/14
 
 
 
