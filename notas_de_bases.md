@@ -159,9 +159,76 @@ https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/12
 
 
 
+tenemos deversos comandos para hacer diversas cosas como por ejemplo 
+drop para borrar toda la base o toda la tablas 
+delete para borrar algo en especifico 
+
+existen diversas funciones pero por lo general va de la mano junto con lo que se tenga que realizar 
+dependiendo de la fucion tenemos diversas paralbras clave
+-------------------
+(KEYWORDS)
+GROUP BY    AGRUPA EN BASE A LO QUE SE LE ORDENA 
+ORDER BY 
+------------------
+FUNCIONES (SON PARA LOS ARGUMENTOS QUE VAN A EVALUAR)
+COUNT()     VA CONTAR ALGO POR EJEMPLO EL NUMERO DE TALLERES O DE ALUMNOS 
+MAX()       VA S BUSCAR EL MAXIMO
+MIN()       VA A BUSVAR EL MINIMO
+LENGHT()    BUSCA LA LONGITUD DE ALGO EN ES ESPECIFICO COMO CONTAR EL NUMERO DE LETRAS
+AVG()       
+-------------------------
+SE PUEDEN COMBINAR LOS KEYWORDS Y LAS FUNCIONES PARA OBTENER BUSQUEDAS MAS PRECISAS
+POR EJEMPLO PARA OBENER EL PRECIO MAS CARO POR MARCA SERIA 
+COUNT MAX PRECIO GROUP BY MARCA
+
+codigo de ejemplo de consulta para una agrupacion y un conteo al mismo tiempo
+
+SELECT nombre_taller, COUNT(folio_usuario) AS cuantos_usuarios_tiene_el_taller
+FROM usuarios INNER JOIN grupo
+ON usuarios.folio_usuario = grupo.folio_usuario1
+INNER JOIN talleres
+ON talleres.codigo_taller = grupo.codigo_taller1
+GROUP BY codigo_taller;
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/99125dfb-ccac-4514-9c15-b09f823ddbfb)
 
 
+PARA VER EL NUMERO DE TALLERES AUN QUE NO TENGAN ALUMNOS ES
+SELECT nombre_taller, COUNT(folio_usuario) AS cuantos_usuarios_tiene_el_taller
+FROM usuarios RIGHT JOIN grupo
+ON usuarios.folio_usuario = grupo.folio_usuario1
+RIGHT JOIN talleres
+ON talleres.codigo_taller = grupo.codigo_taller1
+GROUP BY codigo_taller;
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/91c7f33a-f21a-42cb-9929-271143592b6f)
 
+PARA ORDENARLO SERÍA 
+PARA  BUSCAR POR TALLERISTAS EN LOS PIALRES ES
+SELECT nombre_pilares, COUNT(folio_tallerista) AS cuantos_talleristas_tenemos
+FROM pilares INNER JOIN tallpil
+ON pilares.codigo_pilares = tallpil.codigo_pilares1
+INNERs JOIN talleristas
+ON talleristas.folio_tallerista = tallpil.folio_tallerista1
+GROUP BY codigo_pilares;
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/e9f2ec23-ff26-4002-915b-0c6ac065c48c)
+
+
+SELECT nombre_pilares, nombre_taller
+FROM pilares INNER JOIN tallpil
+ON pilares.codigo_pilares = tallpil.codigo_pilares1
+INNER JOIN talleristas
+ON talleristas.folio_tallerista = tallpil.folio_tallerista1
+INNER JOIN talleres ON talleres.codigo_taller=talleristas.codigo_taller1;
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/2d979dd7-9964-4098-8b8c-0d98ca480ad5)
+
+para hacer el conteo de los talleristas en los pialres se hace de la siguinte manera
+SELECT nombre_pilares, count (nombre_taller)
+FROM pilares INNER JOIN tallpil
+ON pilares.codigo_pilares = tallpil.codigo_pilares1
+INNER JOIN talleristas
+ON talleristas.folio_tallerista = tallpil.folio_tallerista1
+INNER JOIN talleres ON talleres.codigo_taller=talleristas.codigo_taller1
+GROUP BY codigo_pilares;
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/1667f32d-7b5d-4aab-941c-10b7091807a0)
 
 
 
