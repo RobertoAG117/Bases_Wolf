@@ -230,6 +230,30 @@ INNER JOIN talleres ON talleres.codigo_taller=talleristas.codigo_taller1
 GROUP BY codigo_pilares;
 ![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/1667f32d-7b5d-4aab-941c-10b7091807a0)
 
+SELECT nombre_pilares, count (folio_usuario) AS numeros_de_usuarios_por_pilares
+FROM pilares 
+INNER JOIN tallpil ON pilares.codigo_pilares = tallpil.codigo_pilares1
+INNER JOIN talleristas ON talleristas.folio_tallerista = tallpil.folio_tallerista1
+INNER JOIN talleres ON talleres.codigo_taller = talleristas.codigo_taller1
+INNER JOIN grupo ON grupo.codigo_taller1 = talleres.codigo_taller
+INNER JOIN usuarios ON usuarios.folio_usuario = grupo.folio_usuario1
+GROUP BY nombre_pilares;
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/01c4cb81-3c0e-459b-a157-858bafda1c66)
+
+
+Hacemos un conteo de los usuarios que estan en algún pilar de forma ascendente y ordenandolo
+SELECT nombre_pilares, count (folio_usuario) AS numeros_de_usuarios_por_pilares
+FROM pilares 
+left JOIN tallpil ON pilares.codigo_pilares = tallpil.codigo_pilares1
+left JOIN talleristas ON talleristas.folio_tallerista = tallpil.folio_tallerista1
+left JOIN talleres ON talleres.codigo_taller = talleristas.codigo_taller1
+left JOIN grupo ON grupo.codigo_taller1 = talleres.codigo_taller
+left JOIN usuarios ON usuarios.folio_usuario = grupo.folio_usuario1
+GROUP BY nombre_pilares
+ORDER BY COUNT(folio_usuario) ASC;
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/f15c8e5e-4118-4cfd-b065-b7ffd8cd919c)
+
+
 
 
 
