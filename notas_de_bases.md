@@ -257,6 +257,53 @@ Actualizado al día 11/05/23 la base con sus respectivas consultas
 https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/14
 
 
+Condicionales de Bases día 18/05/23
+USE pilares;
+#condicionante si es meyor se pone que es mayor, si es mayor se pone que es  menor
+SELECT nombre_usuario, IF(edad_usuario>=18, "es mayor de edad", "es menor de edad")AS Edad
+FROM usuarios;
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/1aa40229-839e-4774-90b3-a3a6f32a8b3e)
 
+#condicionante si es meyor se pone su celular, si es mayor se pone su apeliido paterno
+SELECT folio_usuario, IF(edad_usuario>=18, apellido_paterno_usuario , telefono_usuario)
+FROM usuarios;
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/dfe57d80-a576-4f34-bcd4-8b2105c133bc)
 
+Para los ejemplos de triggers veremos un par de ejemplos
+se programan para que en algun momento se activen
+regularmente se hace cuando se actualizan los datos, por lo que podría guardar datos cuando alguien modifique algo. como en actualizaciones de usuarios o datos de estos, incluso cuando se eliminan o modifican, dependiendo de que se le pida que hagan. (se activan hasta que se le diga, no se ven, causan ejemplos en las tablas)
+
+Se pueden usar diversas herramientas, en la estructura pondemos un trigger
+Para crear un TRIGGER debemos crear primero la tablas en la que se guardaran los registro en este caso definimos una clave primaria y un par de datos extras como la fecha y la accion a hacer, en este caso ponermos que el registro sea aautomatico para que no tengamos que estarlo actualizando manualmente
+
+  #Trigger
+ CREATE TABLE registro(
+  id_registro INT AUTO_INCREMENT PRIMARY KEY,
+  accion VARCHAR(200),
+  fecha TIMESTAMP
+  );
+ Despues tenemos que realizar la creacion del trigger como tal 
+ 
+DELIMITER //
+CREATE TRIGGER insertar_datos BEFORE INSERT ON grupo
+FOR EACH ROW BEGIN
+INSERT INTO registro(accion) VALUES("se inscribio un usuario a un grupo");
+END //
+DELIMITER ; 
+
+HACEMOS UN SEGUNDO TRIGGER PARA ACTUALIZAR LOS DATOS DE LOS USUARIOS
+INSERT INTO grupo VALUES('HR001','1029','GRUP3','14:00 A 16:00');
+  
+DELIMITER //
+CREATE TRIGGER actualizar_datos BEFORE UPDATE ON usuarios
+FOR EACH ROW BEGIN
+INSERT INTO registro(accion) VALUES("se actualizo un usuario");
+END //
+DELIMITER ;
+
+UPDATE usuarios
+SET 	NOMBRE_USUARIO="GERARDO"
+WHERE folio_usuario=1098;
+ 
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/3e72c66f-b364-4f68-9736-a98c5d43f2a9)
 
