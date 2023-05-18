@@ -306,4 +306,7 @@ SET 	NOMBRE_USUARIO="GERARDO"
 WHERE folio_usuario=1098;
  
 ![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/3e72c66f-b364-4f68-9736-a98c5d43f2a9)
+Link de la base con sus respectivas consultas y triggers
+https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/15
+
 
