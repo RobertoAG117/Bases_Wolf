@@ -309,4 +309,22 @@ WHERE folio_usuario=1098;
 Link de la base con sus respectivas consultas y triggers
 https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/15
 
+Trigger del día 19/05/2023
+https://www.db-fiddle.com/f/9TSrRAAqxv57qr1NeMRoBd/16
+
+EN este caso ponemos que por cada usuario menor de edad se mostrara un 0 y por cada usuario mayor de edad se mostrara un 18
+DELIMITER //
+CREATE TRIGGER modificacion_datos BEFORE UPDATE ON usuarios
+FOR EACH ROW BEGIN
+IF NEW.edad_usuario < 18 THEN
+SET NEW.edad_usuario = 0; #(modifica la nueva edad del usuario a 0)
+ELSEIF NEW.edad_usuario >= 18 THEN
+SET NEW.edad_usuario = 18;
+END IF ;
+INSERT INTO registro(accion) VALUES(NEW.edad_usuario);
+END //
+DELIMITER ;
+
+![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/80debce5-c0b7-4243-a4c2-d953bbdd58c7)
+
 
