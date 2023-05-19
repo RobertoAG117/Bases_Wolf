@@ -327,4 +327,40 @@ DELIMITER ;
 
 ![image](https://github.com/RobertoAG117/Bases_Wolf/assets/125500565/80debce5-c0b7-4243-a4c2-d953bbdd58c7)
 
+PRACTICA 8 TIGGERS
+
+#Trigger
+ CREATE TABLE registro(
+  id_registro INT AUTO_INCREMENT PRIMARY KEY,
+  accion VARCHAR(200),
+  fecha TIMESTAMP
+  );
+
+DELIMITER //
+CREATE TRIGGER insertar_datos BEFORE INSERT ON alumnos
+FOR EACH ROW BEGIN
+IF NEW.nota < 0 THEN
+SET NEW.nota = 0; 
+ELSEIF NEW.nota >= 1 THEN
+SET NEW.nota = 10;
+END IF ;
+INSERT INTO registro(accion) VALUES(NEW.nota);
+END //
+DELIMITER ;
+
+
+DELIMITER //
+CREATE TRIGGER modificacion_datos BEFORE UPDATE ON alumnos
+FOR EACH ROW BEGIN
+IF NEW.nota < 0 THEN
+SET NEW.nota = 0; 
+ELSEIF NEW.nota >= 1 THEN
+SET NEW.nota = 10;
+END IF ;
+INSERT INTO registro(accion) VALUES(NEW.nota);
+END //
+DELIMITER ;
+
+https://www.db-fiddle.com/f/8BGg2MtfWTj3xxgQcmaBvt/0
+
 
