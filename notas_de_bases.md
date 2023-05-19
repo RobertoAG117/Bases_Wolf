@@ -363,4 +363,9 @@ DELIMITER ;
 
 https://www.db-fiddle.com/f/8BGg2MtfWTj3xxgQcmaBvt/0
 
+(Ejemplo del update del usuario)
+UPDATE alumnos
+SET nota="-4"
+WHERE id=100;
+
 
